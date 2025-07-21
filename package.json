@@ -1,0 +1,24 @@
+{
+  "name": "brainbackend",
+  "version": "1.0.0",
+  "description": "its a brain remember thought app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/index.js"
+  },
+  "author": "ajay",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10"
+  }
+}

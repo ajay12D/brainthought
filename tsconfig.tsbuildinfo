@@ -1,0 +1,1 @@
+{"root":["./src/db.ts","./src/helper.ts","./src/index.ts","./src/controller/usr_auth.ts","./src/models/Link_schema.ts","./src/models/Tags_schema.ts","./src/models/content_schema.ts","./src/models/usr_schema.ts","./src/routes/usr_route.ts"],"version":"5.8.3"}

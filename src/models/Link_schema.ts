@@ -8,3 +8,4 @@ const link_schema = new Schema({
 });
 
 export const Link = model('Link', link_schema);
+

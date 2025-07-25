@@ -1,9 +1,14 @@
 import { User} from '../models/usr_schema';
 import {RespnseStatus} from  '../helper';
 import bcrypt from 'bcryptjs';
-import jwt from  'jsonwebtoken'
+import jwt from  'jsonwebtoken';
 
-export const signUp = async (req:any,res: any) =>{
+import { Request, Response } from "express";
+interface AuthRequest extends Request {
+    user?: string
+}
+
+export const signUp = async (req:Request,res: Response) =>{
    const { username, password} = req.body;
 
    try{
@@ -82,4 +87,33 @@ export const signIn = async (req:any,res: any) => {
             error: e.message
         })
   }
+}
+
+
+ interface users {
+  "_id": string,
+  "username": string,
+  "password": string
+   "__v": number
+ }
+
+export const ge_users = async (req:AuthRequest,res:Response) =>{
+         //@ts-ignore   
+  const {user} = req;
+
+       if(user){
+        const usrs: users[] = await User.find();
+          return res.status ( RespnseStatus.success)
+          .json({
+            message: 'here is the all the users',
+            usrs:  usrs.map(u => u.username)
+          })
+       }
+       else{
+        return  res.status(RespnseStatus.success)
+        .json({
+          message:`somtheing went wrong, we did'nt found any user`
+        })
+       }
+       
 }

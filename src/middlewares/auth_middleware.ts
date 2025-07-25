@@ -31,7 +31,7 @@ export const authM = (req: AuthRequest, res: Response, next: NextFunction) => {
 
         const decode = jwt.verify(token, 'ajay123456789') as CustomJwtPayload;
 
-        req.user = decode.id
+        req.user = decode.id;
 
         next();
 

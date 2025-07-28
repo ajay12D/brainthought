@@ -4,11 +4,13 @@ import usr_route from './routes/usr_route'
 import tag_route from './routes/tag_route';
 import content_route from './routes/content_route';
 import link_route  from './routes/link_route'
-import {connectDb} from './db'
+import {connectDb} from './db';
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 
 app.use('/api/v1/brain', usr_route);

@@ -25,7 +25,7 @@ export const signUp = async (req:Request,res: Response) =>{
 
       const user = await User.create({
         username:username,
-        password: hasedPasswrd
+        password: hasedPasswrd,
       })
 
       if(user){

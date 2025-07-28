@@ -15,7 +15,7 @@ export const createContent = async (req: AuthRequest, res: Response) => {
             link : content_details.link,
             type: content_details.type,
             title: content_details.title,
-            tags: content_details.tags,
+           // tags: content_details.tags,
             userId: userId
            });
 
